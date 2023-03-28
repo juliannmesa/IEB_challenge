@@ -1,0 +1,12 @@
+export APP_PATH='{CHANGE TO APP LOCATION}'
+alias challenge="cd ${APP_PATH}"
+alias start_app="challenge && docker compose up -d"
+alias setup_app="challenge && docker compose build && start_app"
+alias kill_app="challenge && docker compose stop"
+alias app_logs="challenge && docker logs -f challenge_api"
+
+# enter console: docker-compose run django_challenge_api sh -c "cd django_challenge_api && python manage.py shell"
+# sudo docker compose run  django_challenge_api sh -c "cd django_challenge_api && python3 manage.py createsuperuser"
+
+
+

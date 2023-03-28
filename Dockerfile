@@ -1,3 +1,6 @@
+FROM postgres:latest
+COPY docker/dump.sql /docker-entrypoint-initdb.d/
+
 # The image you are going to inherit your Dockerfile from
 FROM python:3.7-alpine
 # Necessary, so Docker doesn't buffer the output and that you can see the output 
